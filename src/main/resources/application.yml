@@ -1,0 +1,37 @@
+server:
+  port: 8088
+
+spring:
+  ## 使用阿里的druid
+  ## 导入依赖
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/rbac?serverTimezone=GMT%2b8
+    username: root
+    password: 'tzh123456'
+
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    druid:
+      max-active: 10
+      min-idle: 3
+      connect-timeout: 10000
+
+##  thymeleaf:
+  ##  cache: false
+    ##prefix: classpath:/templates/
+    ##suffix: .html
+
+  ##Redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 0302Java
+    database: 1
+    timeout: 5000
+    jedis:
+      pool:
+       max-idle: 8
+       min-idle: 0
+       max-active: 8

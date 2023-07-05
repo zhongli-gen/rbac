@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>自定义登录页</div>
+<form action="/login" method="post" th:action="@{/login}" th:mathod="post">
+  <div>
+    <input type="text" name="username" placeholder="用户名">
+  </div>
+  <div>
+    <input type="password" name="password" placeholder="密码">
+  </div>
+  <button type="submit">登录</button>
+</form>
+
+</body>
+</html>
